@@ -1,150 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <style>
-        body{
-            background-color:blanchedalmond;
-        }
-        h1{
-            border: 3px solid greenyellow;
-            text-align: center;
-            color: blue;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome – Orbit E Techno School</title>
+  <style>
+    :root {
+      --bg-1: #4f46e5;
+      --bg-2: #7c3aed;
+      --bg-3: #ec4899;
+      --card-border: rgba(255, 255, 255, 0.25);
+      --accent: #ffd166;
+      --text: #ffffff;
+    }
 
-        }
-        h1:hover{
-        
-            background-color: aquamarine;
-            color: red;
-        }
-        .box{
-            border: 3px solid goldenrod;
-            height: auto;
-            width: 25%;
-        }
-        .box:hover{
-            background-color:aliceblue;
-        }
-        .studentname{
-            border: 2px solid green ;
-            margin: 3px;
-            width: 60%;
-            height: auto;
-            padding: 10px;
-        }
-        .studentname:hover{
-            background-color: cyan;
-        }
-        .box1{
-             border: 3px solid goldenrod;
-            height: auto;
-            width: 70%;
-            position:absolute ;
-            left: 27%;
-            top: 14%;
-        }
-    
-        .studentdetails{
-            border: 2px solid dodgerblue;
-            margin: 11px;
-            padding: 2px;
-            width:90%;
-            height: auto;
-            position:relative;
-        }
-        .studentdetails:hover{
-            background-color: aqua;
+    body {
+      margin: 0;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--bg-1), var(--bg-2) 50%, var(--bg-3));
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial;
+    }
 
-        }
-        img{
-            width: 100px;
-            height: 100px;
-        }
-        .details{
-            position: absolute;
-            left: 15%;
-            top: 20%;
-        }
-        .details:hover{
-            border: 2px solid red;
-            padding: 2px;
-            margin: 2px;
-            background-color: aliceblue;
+    .card {
+      width: min(100% - 2rem, 980px);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.10));
+      border: 1px solid var(--card-border);
+      padding: clamp(16px, 4vw, 40px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
+    .headline {
+      font-weight: 800;
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      margin: 0 0 .35em 0;
+      background: conic-gradient(from 0deg, #ff6b6b, #ffd166, #06d6a0, #118ab2, #7c3aed, #ff6b6b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
-        }
-        footer{
-            position:absolute;
-            bottom: -28%;
-            width: 100%;
-        }
-     </style>
+    .subhead {
+      font-size: clamp(1rem, 2.8vw, 1.5rem);
+      margin: 0 0 .75rem 0;
+    }
+
+    .name {
+      display: inline-block;
+      font-size: clamp(1.4rem, 4.5vw, 2.25rem);
+      font-weight: 900;
+      padding: .35em .65em;
+      border-radius: 999px;
+      background-color: var(--accent);
+      color: #1f2937;
+    }
+
+    .school {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      margin-top: .5rem;
+      font-weight: 800;
+      color: #ffeb3b;
+      text-shadow: 2px 2px 6px rgba(0,0,0,.4);
+    }
+
+    .quote {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      margin: 1.25rem auto 0;
+      max-width: 60ch;
+      line-height: 1.6;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-items: center;
+      margin-top: 1.2rem;
+    }
+
+    @media (min-width: 760px) {
+      .row {
+        grid-template-columns: 1.3fr .7fr;
+      }
+    }
+
+    .art {
+      display: grid;
+      place-items: center;
+      padding: 10px;
+    }
+
+    .emoji-cloud {
+      font-size: clamp(2rem, 8vw, 4rem);
+      margin-bottom: 1rem;
+    }
+
+    .logo {
+      max-width: 160px;
+      width: 70%;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,.3);
+    }
+  </style>
 </head>
 <body>
-    <h1>STUDENT DETAILS</h1> 
-    <div class="box">
-        <div class="studentname">MANGA ANIL</div>
-        <div class="studentname">BILLA DEEKSITH</div>
-        <div class="studentname">ANJAN KITS</div>
-        <div class="studentname">DESHAPAKA MAHENDAR</div>
-        <div class="studentname">CH JAGAN</div>
-    </div>
-    <div class="box1">
-        <div class="studentdetails">
-            <img src="https://media.istockphoto.com/id/1438969575/photo/smiling-young-male-college-student-wearing-headphones-standing-in-a-classroom.jpg?s=612x612&w=0&k=20&c=yNawJP9JGXU6LOL262ME5M1U2xxNKQsvT7F9DZhZCh4=" alt="">
-            <div class="details">
-            <div >Name:Anil</div>
-            <div >Age:21</div>
-            <div >Gender:Male</div>
-            <div >Location:Warangal</div>
-            </div>
-        </div>
-         <div class="studentdetails">
-            <img src="https://img.freepik.com/premium-photo/young-happy-school-guy-college-university-student-with-backpack-headphones-using-laptop_1429-10049.jpg" alt="">
-            <div class="details">
-            <div >Name:Billa Deeksith</div>
-            <div >Age:21</div>
-            <div >Gender:Male</div>
-            <div >Location:Hanmakonda</div>
-        </div>
-        
-        </div>
-         <div class="studentdetails">
-            <img src="https://media.istockphoto.com/id/2105091005/photo/young-student-taking-notes-while-e-learning-on-laptop-at-the-university.jpg?s=612x612&w=0&k=20&c=5AoTWNFmHm-HeQfx0FzB3LPm3MKQXgokYelEvmC_47E=" alt="">
-            <div class="details">
-            <div >Name:Anjan Kits</div>
-            <div >Age:20</div>
-            <div >Gender:Male</div>
-            <div >Location:Peddapalli</div>
-            </div>
-        </div>
-         <div class="studentdetails">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Lh0o-F-XvdEKJf8qlF3fcctDoGCF1Xh_fXL7ETRraAJTVuX3j6McL7EscehrxHe5_4k&usqp=CAU" alt="">
-            <div class="details">
-            <div >Name:Deshapaka Mahendar</div>
-            <div >Age:24</div>
-            <div >Gender:Male</div>
-            <div >Location:Lb Nagar</div>
-            </div>
-        </div>
-         <div class="studentdetails">
-            <img src="https://plus.unsplash.com/premium_photo-1682091992663-2e4f4a5534ba?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZSUyMHN0dWRlbnR8ZW58MHx8MHx8fDA%3D" alt="">
-            <div class="details">
-            <div >Name:Ch Jagan</div>
-            <div >Age:30</div>
-            <div >Gender:Male</div>
-            <div >Location:Vijaywada</div>
-            </div>
-        </div>
+  <main class="card">
+    <h1 class="headline">🌟 WELCOME 🌈</h1>
+    <p class="subhead">To Our Respected Principal Sir</p>
+    <p class="name">Mr. Dinesh</p>
+    <p class="school">Orbit E Techno School</p>
 
-    </div>
-    <footer>
-        <p style="text-align: center;color: rgb(55, 18, 222);">@anil2025</p>
-    </footer>
+    <section class="row">
+      <div>
+        <p class="quote">💐 <em>A true leader inspires, guides, and lights the path of knowledge.</em> 💐<br>
+        We are delighted to welcome you into our school family. With your vision and guidance, Orbit E Techno School will shine brighter than ever. 🌟📚✨</p>
+      </div>
+      <div class="art">
+        <div class="emoji-cloud">🎈🎓📚✨</div>
+        <img class="logo" src="WhatsApp Image 2025-08-16 at 09.41.40_9ab34f5b.jpg" alt="Orbit E Techno School Logo" />
+      </div>
+    </section>
+  </main>
 </body>
-
-    
-
 </html>
